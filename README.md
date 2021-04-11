@@ -27,3 +27,5 @@ I have also included a `docker-compose.yml` file that will allow you to run Free
 * Device template files for Cisco switches running IOS-XE.  These would be pushed to the Fabric Edge switches by Cisco DNA Center in order to tell them to use FreeRADIUS for authentication and authorization. 
  
 * Better documentation overall
+
+If you have any questions about these files or the purpose of them, please open an [issue](https://github.com/eiddor/cisco-sda-freeradius/issues).
