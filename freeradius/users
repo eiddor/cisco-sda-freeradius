@@ -1,0 +1,55 @@
+# This is our FreeRADIUS users file where the actual users are defined along with the parameters
+# to be pushed to the clients (network devices).
+#
+# In production we would typically use an upstream user store such as LDAP or AD.
+#
+# Important fields briefly explained:
+#
+# user1 = username
+# password = password
+# 
+# Tunnel-Private-Group-ID:
+# VLAN ID or name that the user will be placed in after successful authentication
+# 
+# Cisco TrustSec parameters:
+#
+# Cisco-AVPair = "cts:vn=Campus":
+# The Cisco Software-Defined Access Virtual Network (VN) that is pushed to the client. (OPTIONAL)
+#
+# Cisco-AVPair += "cts:security-group-tag=0016-00"
+# The Scalalable (or Security) Group Tag (SGT) that will be assigned to the user's traffic.
+# Note1: The SGT is in HEX format and can be obtained from Cisco DNA Center or Cisco ISE.
+# Note2: The "-00" following the SGT is the SGT Generation and can be obtained from Cisco ISE.
+#
+#
+user1 Cleartext-Password := "password"
+	Service-Type = Framed,
+	Tunnel-Private-Group-ID = "1021",
+	Tunnel-Type = 13,
+	Tunnel-Medium-Type = 6,
+	Cisco-AVPair = "cts:vn=Campus",
+	Cisco-AVPair += "cts:security-group-tag=0016-00"
+
+user2 Cleartext-Password := "password"
+	Service-Type = Framed,
+	Tunnel-Private-Group-ID = "1021",
+	Tunnel-Type = 13,
+	Tunnel-Medium-Type = 6,
+	Cisco-AVPair = "cts:vn=Campus",
+	Cisco-AVPair += "cts:security-group-tag=0016-00"
+
+user3 Cleartext-Password := "password"
+	Service-Type = Framed,
+	Tunnel-Private-Group-ID = "1021",
+	Tunnel-Type = 13,
+	Tunnel-Medium-Type = 6,
+	Cisco-AVPair = "cts:vn=Campus",
+	Cisco-AVPair += "cts:security-group-tag=0018-00"
+
+user4 Cleartext-Password := "password"
+	Service-Type = Framed,
+	Tunnel-Private-Group-ID = "1021",
+	Tunnel-Type = 13,
+	Tunnel-Medium-Type = 6,
+	Cisco-AVPair = "cts:vn=Campus",
+	Cisco-AVPair += "cts:security-group-tag=0018-00"
