@@ -16,7 +16,7 @@ Although this example is for FreeRADIUS, you can extend this same functionality 
 
 The important files in this repository:
 
-##### `freeradius/clients.conf`
+#### `freeradius/clients.conf`
 
 The FreeRADIUS `client.conf` file specifies the  parameters for the _RADIUS clients_, typically  network switches.  In Cisco ISE these are known as network access devices (NADs.)  This is not the same as the user devices that will actually be logging into the network.
 
@@ -39,7 +39,7 @@ The official documentation for this file can be found [here](https://freeradius.
 
 See [here](https://github.com/FreeRADIUS/freeradius-server/blob/v3.0.x/raddb/clients.conf) for a well-documented example.
 
-##### `freeradius/users`
+#### `freeradius/users`
 
 The FreeRADIUS `users` file contains both the authentication credentials and authorization result information about users logging into the network.  In a production environment your RADIUS server would usually point to an LDAP or AD server for the authentication credentials.
 
