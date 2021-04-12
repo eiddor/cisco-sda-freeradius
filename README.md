@@ -18,7 +18,7 @@ The important files in this repository:
 
 #### `freeradius/clients.conf`
 
-The FreeRADIUS `client.conf` file specifies the  parameters for the _RADIUS clients_, typically  network switches.  In Cisco ISE these are known as network access devices (NADs.)  This is not the same as the user devices that will actually be logging into the network.
+The FreeRADIUS `clients.conf` file specifies the  parameters for the _RADIUS clients_, typically  network switches.  In Cisco ISE these are known as network access devices (NADs.)  This is not the same as the user devices that will actually be logging into the network.
 
 ```sh
 client switches {
