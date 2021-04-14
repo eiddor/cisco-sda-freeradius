@@ -92,7 +92,9 @@ You can start the container running in the background with: `docker-compose up -
 
 You can also run it directly with:
 
-`docker run --name freeradius -p 1812-1813:1812-1813/udp -v "/$(pwd)/freeradius/clients.conf:/etc/raddb/clients.conf" -v "/$(pwd)/freeradius/users:/etc/raddb/mods-config/files/authorize" roddie/cisco-sda-freeradius:latest`
+```
+docker run --name freeradius -p 1812-1813:1812-1813/udp -v "/$(pwd)/freeradius/clients.conf:/etc/raddb/clients.conf" -v "/$(pwd)/freeradius/users:/etc/raddb/mods-config/files/authorize" roddie/cisco-sda-freeradius:latest
+```
 
 The image referenced in `docker-compose.yml` is a [custom Docker image](https://hub.docker.com/r/roddie/cisco-sda-freeradius) for use with this project which includes a fix to push the RADIUS attributes to the switch inside of the tunneled Access-Accept message (see note in non-Docker section below). 
 
