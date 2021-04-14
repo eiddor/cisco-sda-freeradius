@@ -136,7 +136,7 @@ We can see above that we authenticate successfully with our credentials as our R
 
 ### Usage
 
-The file `cisco/cat9k-template.txt` is a sample of what should be pushed to a Cisco Catalyst 9000 switch in order to redirect the authentication and authorization function to your FreeRADIUS server.  This template should be pushed using [Cisco DNA Center](https://www.cisco.com/c/en/us/products/cloud-systems-management/dna-center/index.html and it will not remove the existing configuration that is pointing to ISE for policy.
+The file `cisco/cat9k-template.txt` is a sample of what should be pushed to a Cisco Catalyst 9000 switch in order to redirect the authentication and authorization function to your FreeRADIUS server.  This template should be pushed using [Cisco DNA Center](https://www.cisco.com/c/en/us/products/cloud-systems-management/dna-center/index.html) and it will not remove the existing configuration that is pointing to ISE for policy.
 
 The file is mostly documented, but I will add more information here, too.
 ### TODO
