@@ -2,7 +2,7 @@ version: '3'
 
 services:
      freeradius:
-         image: freeradius/freeradius-server:latest-alpine
+         image: roddie/cisco-sda-freeradius:latest
          container_name: freeradius
          ports:
              - "1812-1813:1812-1813/udp"

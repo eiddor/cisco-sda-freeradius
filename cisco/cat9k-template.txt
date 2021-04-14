@@ -1,0 +1,33 @@
+!
+! Sample IOS-XE command template to be pushed to Fabric Edge switches
+! by DNA Center.
+!
+! Replace "<FreeRADIUS IP>" with the IP address of your FreeRADIUS server
+!
+! Replace "<radiussecret>" with the RADIUS secret from your clients.conf file
+!
+!
+
+aaa group server radius freeradius
+ server name freeradius
+ ip radius source-interface Loopback0
+aaa authentication dot1x default group freeradius
+aaa authorization network default group freeradius
+aaa accounting identity default start-stop broadcast group dnac-client-radius-group group thirdparty
+aaa accounting network default start-stop group dnac-client-radius-group group freeradius
+aaa server radius dynamic-author
+ client <FreeRADIUS IP> server-key 0 <radiussecret>
+ip radius source-interface Loopback0
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 6 support-multiple
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+radius-server attribute 31 mac format ietf upper-case
+radius-server attribute 31 send nas-port-detail mac-only
+radius-server dead-criteria time 5 tries 3
+radius-server deadtime 3
+radius server freeradius
+ address ipv4 <FreeRADIUS IP> auth-port 1812 acct-port 1813
+ timeout 4
+ retransmit 3
+ key 0 <radiussecret>
